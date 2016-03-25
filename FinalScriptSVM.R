@@ -127,6 +127,7 @@ totaltrainlabel <- as.matrix(train[,1])
 totaltrainreduced <- totaltrain/255
 totaltraincov <- cov(totaltrainreduced)
 pcatotaltrain <- prcomp(totaltraincov)
+totaltrainfinal <- as.matrix(totaltrain) %*% pcatotaltrain$x[,1:45]
 
 #Applying SVM on total training set and calculating accuracy
 totaltrainlabel <- as.factor(totaltrainlabel)
