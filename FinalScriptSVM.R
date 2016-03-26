@@ -62,7 +62,6 @@ trainlabel <- as.factor(trainlabel)
 #Making a datatable to store errors for choosing the parameter C suing model selection
 datatable_model_selection <- data.frame(c(0.1,0.5,1,10,20),c(NA,NA,NA,NA,NA),c(NA,NA,NA,NA,NA))
 colnames(datatable_model_selection) <- c("C","Accuracytrain","AccuracyCV")
-View(datatable_model_selection)
 
 #Function to calculate accuracy for various C and store resultant 
 #train and cv accuracy in datatable
